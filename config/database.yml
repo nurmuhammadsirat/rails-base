@@ -1,0 +1,24 @@
+default: &default
+  adapter: postgresql
+  encoding: unicode
+  pool: <%= ENV.fetch("RAILS_MAX_THREADS") { 5 } %>
+
+development:
+  <<: *default
+  database: simply_hr_development
+  username: simply_hr_development_user
+  password: simply_hr_development_pwd
+  host: localhost
+  port: 5432
+
+test:
+  <<: *default
+  database: simply_hr_test
+  username: simply_hr_test_user
+  password: simply_hr_test_pwd
+  host: localhost
+  port: 5432
+
+production:
+  <<: *default
+  url: <%= ENV['DATABASE_URL'] %>
