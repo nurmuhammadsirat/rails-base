@@ -1,24 +1,20 @@
-# README
+# Base Rails
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+This is a basic Rails setup that I always use before starting development.
 
-Things you may want to cover:
+## What's Included?
 
-* Ruby version
+Current Rails version: 5.2.1
 
-* System dependencies
+Additional gems included:
 
-* Configuration
+* devise
+* omniauth (with omniauth-google-oauth2)
+* pry-byebug
+* rspec-rails
+* dotenv-rails
 
-* Database creation
+## Additional Setup After Cloning
 
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+* Follow instructions at https://github.com/zquestz/omniauth-google-oauth2 to enable Google login.
+* Create a .env file and add the following environment variables: GOOGLE_CLIENT_ID & GOOGLE_CLIENT_SECRET
