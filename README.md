@@ -4,7 +4,7 @@ This is a basic Rails setup that I always use before starting development.
 
 ## What's Included?
 
-Current Rails version: 5.2.1
+Current Rails version: 5.2.2
 
 Additional gems included:
 
