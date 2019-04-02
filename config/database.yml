@@ -5,20 +5,24 @@ default: &default
 
 development:
   <<: *default
-  database: simply_hr_development
-  username: simply_hr_development_user
-  password: simply_hr_development_pwd
-  host: localhost
-  port: 5432
+  database: <%= ENV.fetch("POSTGRES_DEV_DATABASE") { 'myproject_db' } %>
+  username: <%= ENV.fetch("POSTGRES_DEV_USER") { 'myproject_user' } %>
+  password: <%= ENV.fetch("POSTGRES_DEV_PASSWORD") { 'myproject_password' } %>
+  host: <%= ENV.fetch("POSTGRES_DEV_HOST") { 'myproject_host' } %>
+  port: <%= ENV.fetch("POSTGRES_DEV_PORT") { 'myproject_port' } %>
 
 test:
   <<: *default
-  database: simply_hr_test
-  username: simply_hr_test_user
-  password: simply_hr_test_pwd
-  host: localhost
-  port: 5432
+  database: <%= ENV.fetch("POSTGRES_TEST_DATABASE") { 'myproject_db' } %>
+  username: <%= ENV.fetch("POSTGRES_TEST_USER") { 'myproject_user' } %>
+  password: <%= ENV.fetch("POSTGRES_TEST_PASSWORD") { 'myproject_password' } %>
+  host: <%= ENV.fetch("POSTGRES_TEST_HOST") { 'myproject_host' } %>
+  port: <%= ENV.fetch("POSTGRES_TEST_PORT") { 'myproject_port' } %>
 
 production:
   <<: *default
-  url: <%= ENV['DATABASE_URL'] %>
+  database: <%= ENV.fetch("POSTGRES_PROD_DATABASE") { 'myproject_db' } %>
+  username: <%= ENV.fetch("POSTGRES_PROD_USER") { 'myproject_user' } %>
+  password: <%= ENV.fetch("POSTGRES_PROD_PASSWORD") { 'myproject_password' } %>
+  host: <%= ENV.fetch("POSTGRES_PROD_HOST") { 'myproject_host' } %>
+  port: <%= ENV.fetch("POSTGRES_PROD_PORT") { 'myproject_port' } %>
