@@ -120,3 +120,5 @@ yarn-debug.log*
 /storage/*
 !/storage/.keep
 
+# Ignore macOS related files
+.DS_Store
