@@ -11,7 +11,7 @@ gem 'turbolinks', '~> 5'
 gem 'jbuilder', '~> 2.5'
 gem 'bootsnap', '>= 1.1.0', require: false
 gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
-gem 'devise', '~> 4.6.2'
+gem 'devise', '~> 4.7.1'
 gem 'omniauth', '~> 1.8.1'
 gem 'omniauth-google-oauth2', '~> 0.5.3'
 
